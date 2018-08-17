@@ -1,4 +1,4 @@
-package org.devgroup.handbook.dao.entity;
+package org.devgroup.handbook.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

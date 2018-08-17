@@ -1,4 +1,4 @@
-package org.devgroup.handbook.dao.entity;
+package org.devgroup.handbook.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,12 +9,12 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "department")
+@Table(name = "position")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Department {
+public class Position {
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
@@ -22,10 +22,4 @@ public class Department {
     private Integer id;
     @Column(name = "name")
     private String name;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "parent_department")
-    private Department parentDepartment;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "head_employee")
-    private Employee headEmployee;
 }

@@ -1,4 +1,4 @@
-package org.devgroup.handbook.dao.entity;
+package org.devgroup.handbook.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,7 +28,7 @@ public class Employee {
     @Column(name = "patronymic")
     private String patronymic;
     @Column(name = "gender", nullable = false)
-    private Integer gender;
+    private Gender gender;
     @Column(name = "birthday", nullable = false)
     private LocalDate birthday;
     @ManyToOne(fetch = FetchType.LAZY)
